@@ -13,3 +13,10 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+async function displayJohnProfile() {
+    const johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+}
+
+displayJohnProfile();
+

@@ -33,3 +33,21 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+async function displayJohn () {
+  try {
+  const displayJohnProfile = await getJohnProfile();
+  console.log(displayJohnProfile);
+  
+  const displayJohnOrders = await getJohnOrders();
+  console.log(displayJohnOrders);
+  } catch (error) {
+    console.log(
+     {
+        errorCode: 500,
+        message: '👿 Failed to request data from server'
+     }
+    )
+  }
+};
+
+displayJohn();

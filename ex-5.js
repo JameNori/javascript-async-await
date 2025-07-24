@@ -12,3 +12,19 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+async function displayJohnProfile() {
+try {
+    const johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+  } catch (error) {
+    console.log(
+      {
+        errorCode: 500,
+        message: '👿 Failed to request data from server'
+      }
+    );
+  }
+}
+
+
+displayJohnProfile();
