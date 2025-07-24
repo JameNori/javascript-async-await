@@ -13,3 +13,9 @@ let getJohnProfile = () => {
 };
 
 // Start coding here
+function handleReject(reject) {
+  console.log(reject);
+  
+}
+
+getJohnProfile().catch(handleReject)
